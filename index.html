@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GN46JLLP0X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GN46JLLP0X');
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Email Campaign</title>
+
+  <meta property="og:title" content="Norway email campaign">
+  <meta property="og:description" content="Send email to Norwegian parliament members">
+  <meta property="og:image" content="https://LionSunRevolution2026.github.io/FreeIran-Norway/Norway.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://LionSunRevolution2026.github.io/FreeIran-Norway/">
+
+  <style>
+    :root{
+      --bg0:#07131c; --bg1:#071a26; --bg2:#061018;
+      --card0:#0e2533; --card1:#0b1f2c;
+      --border:rgba(255,255,255,.10);
+      --text:#e8f2ff;
+      --muted:rgba(232,242,255,.78);
+      --accent:#6fcf97;
+      --info0:rgba(111,207,151,.10);
+      --info1:rgba(111,207,151,.25);
+      --inputBg:rgba(255,255,255,.06);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      max-width:980px;
+      margin:34px auto;
+      padding:0 16px 30px;
+      line-height:1.6;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(47,192,214,.10), transparent 55%),
+        radial-gradient(900px 600px at 80% 0%, rgba(60,120,255,.10), transparent 50%),
+        linear-gradient(180deg, var(--bg1), var(--bg0) 55%, var(--bg2));
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:14px;
+    }
+
+    .titleRow{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .badgeIcon{
+      width:55px;
+      height:55px;
+      font-size:35px;
+      border-radius:12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    h1{margin:0;font-size:32px;letter-spacing:.2px}
+    .subtitle{margin:4px 0 0;color:var(--muted);white-space:pre-line}
+
+    button, a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+      text-decoration:none;
+      transition:transform .05s ease, background .2s ease;
+      user-select:none;
+    }
+
+    button:active{transform:translateY(1px)}
+    button:disabled{opacity:.5;cursor:not-allowed}
+
+    .langBtn{
+      padding:10px 12px;
+      border-radius:14px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .card{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)),
+        linear-gradient(180deg, var(--card0), var(--card1));
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:16px;
+      margin:14px 0;
+      box-shadow:
+        0 22px 60px rgba(0,0,0,.55),
+        0 1px 0 rgba(255,255,255,.05) inset;
+    }
+
+    .emailTextCard pre{
+      margin:10px 0 0;
+      white-space:pre-wrap;
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;
+      padding:14px;
+      color:rgba(232,242,255,.94);
+      font-family:inherit;
+      line-height:1.7;
+    }
+
+    .signatureCard{
+      background:var(--info0);
+      border:1px solid var(--info1);
+    }
+
+    .signatureTitle{
+      margin:0 0 8px;
+      font-size:20px;
+    }
+
+    .signatureText{
+      color:var(--muted);
+      margin:0 0 12px;
+      white-space:pre-line;
+    }
+
+    .inputWrap{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .label{
+      font-weight:700;
+    }
+
+    .nameInput{
+      width:100%;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background:var(--inputBg);
+      color:var(--text);
+      font-size:16px;
+      outline:none;
+    }
+
+    .nameInput::placeholder{
+      color:rgba(232,242,255,.45);
+    }
+
+    .inputHint{
+      color:var(--muted);
+      font-size:.95rem;
+      margin:0;
+    }
+
+    .panel{
+      border-radius:22px;
+      padding:16px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 18px 44px rgba(0,0,0,.42);
+      margin-top:14px;
+    }
+
+    .panel::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      opacity:.22;
+      background: radial-gradient(900px 320px at 0% 0%, var(--accent), transparent 55%);
+      pointer-events:none;
+    }
+
+    .panelHeader{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:10px;
+      position:relative;
+    }
+
+    .panelTitle{margin:0;font-size:22px;line-height:1.25}
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.15);
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:var(--accent);
+      box-shadow:0 0 0 3px rgba(255,255,255,.06);
+    }
+
+    .meta{margin:10px 0 12px;color:var(--muted);position:relative}
+
+    .sendBox{
+      position:relative;
+      border-radius:18px;
+      padding:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.16);
+    }
+
+    .sendBtn{
+      width:100%;
+      padding:14px 14px;
+      border-radius:16px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      font-size:16px;
+    }
+
+    .statusLine{margin-top:10px;color:var(--muted)}
+    .bullets{margin:10px 0 0 18px;color:var(--muted)}
+    .bullets li{margin:6px 0}
+
+    details{margin-top:10px}
+    details summary{cursor:pointer;font-weight:900}
+
+    .mono{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+      unicode-bidi:plaintext;
+      word-break:break-word;
+    }
+
+    pre.mono{
+      white-space:pre-wrap;
+      background:rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;
+      padding:12px;
+      margin:10px 0 0;
+      color:rgba(232,242,255,.92);
+    }
+
+    .files{margin-top:10px;color:var(--muted);font-size:.95rem}
+    .error{color:#ffb4b4}
+
+    @media (max-width:700px){
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="titleRow">
+      <div class="badgeIcon">🕊️</div>
+      <div>
+        <h1 id="pageTitle"></h1>
+        <div class="subtitle" id="pageSubtitle"></div>
+      </div>
+    </div>
+    <button id="langBtn" class="langBtn" type="button"></button>
+  </div>
+
+  <div class="card emailTextCard">
+    <h2 id="aboutTitle"></h2>
+    <pre id="aboutText"></pre>
+  </div>
+
+  <div class="card signatureCard">
+    <h2 class="signatureTitle" id="signatureTitle"></h2>
+    <p class="signatureText" id="signatureNote"></p>
+
+    <div class="inputWrap">
+      <label class="label" id="nameLabel" for="fullName"></label>
+      <input id="fullName" class="nameInput" type="text" autocomplete="name" />
+      <p class="inputHint" id="nameHint"></p>
+    </div>
+  </div>
+
+  <section class="panel">
+    <div class="panelHeader">
+      <div>
+        <h2 class="panelTitle" id="panelTitle"></h2>
+        <div class="meta" id="panelMeta"></div>
+      </div>
+      <div class="pill"><span class="dot"></span><span id="pillLabel"></span></div>
+    </div>
+
+    <div class="sendBox">
+      <button class="sendBtn" id="sendBtn" disabled></button>
+
+      <div class="statusLine">
+        <span id="statusLabel"></span>
+        <span id="status">—</span>
+        <span id="error" class="error"></span>
+      </div>
+
+      <ul class="bullets" id="bullets"></ul>
+
+      <details>
+        <summary id="previewSummary"></summary>
+        <div class="statusLine"><b id="previewSubjectLabel"></b> <span class="mono" id="previewSubject"></span></div>
+        <pre class="mono" id="previewBody"></pre>
+      </details>
+
+      <div class="files" id="files"></div>
+    </div>
+  </section>
+
+<script>
+  let LANG = "fa";
+  let nameInputTracked = false;
+
+  function trackEvent(eventName, params = {}) {
+    if (typeof gtag !== "function") return;
+    gtag("event", eventName, params);
+  }
+
+  const UI = {
+    fa: {
+      dir:"rtl",
+      title:"کمپین ایمیل نروژ",
+      subtitle:"با یک کلیک، پیش‌نویس آماده در برنامه ایمیل شما باز می‌شود.\nاولین گیرنده در قسمت To قرار می‌گیرد و بقیه گیرندگان در Bcc هستند.",
+      aboutTitle:"ترجمه متن ایمیل",
+      aboutText:`موضوع: درخواست از پارلمان نروژ: حمایت از مردم ایران، تمامیت ارضی ایران، و نقش شاهزاده رضا پهلوی
+
+متن:
+
+نمایندگان محترم پارلمان نروژ،
+
+ما به‌عنوان شهروندان ایرانی و حامیان حقوق بشر، مقیم نروژ و اروپا، این نامه را برای جلب توجه شما به وضعیت مردم ایران و اهمیت اتخاذ موضعی روشن و منسجم از سوی نروژ می‌نویسیم.
+
+مردم ایران شایسته آزادی، کرامت، و برخورداری کامل از حقوق بنیادین خود هستند. نزدیک به نیم قرن است که آنان زیر سرکوب جمهوری اسلامی زندگی کرده‌اند؛ نظامی که میلیون‌ها شهروند را از ابتدایی‌ترین آزادی‌هایشان محروم کرده است. در این مقطع تاریخی، ضروری است که نروژ به‌طور قاطع و بدون ابهام از مردم ایران در مبارزه‌شان برای پایان دادن به این رژیم حمایت کند.
+
+میلیون‌ها ایرانی، در داخل و خارج از کشور، خواهان پایان جمهوری اسلامی و ساختن ایرانی آزاد، دموکراتیک، و مبتنی بر حقوق بشر هستند. در این روند تاریخی، بسیاری از ایرانیان شاهزاده رضا پهلوی را تنها رهبری می‌دانند که از مشروعیت و اعتبار لازم برای نمایندگی اراده مردم ایران برخوردار است. نقش او در هدایت یک گذار مسالمت‌آمیز از جمهوری اسلامی به سوی یک نظام دموکراتیک که به‌طور مشروع توسط مردم انتخاب شود، از سوی اکثریت بسیار بزرگ ایرانیان دارای اهمیتی اساسی تلقی می‌شود.
+
+ما درخواست می‌کنیم که:
+
+• نروژ همچنان از مردم ایران، از نظر سیاسی و اخلاقی، در آرمان آنان برای آزادی و پایان جمهوری اسلامی حمایت کند.
+• بر خدشه‌ناپذیری تمامیت ارضی ایران در همه مجامع ملی و بین‌المللی تأکید شود.
+• از اراده مشروع مردم ایران برای تعیین ساختار آینده نهادی و سیاسی کشورشان با قاطعیت حمایت شود.
+• نقش اساسی شاهزاده رضا پهلوی به‌عنوان شخصیتی محوری و رهبری شایسته برای هدایت گذار مسالمت‌آمیز از جمهوری اسلامی به سوی یک نظام دموکراتیکِ برگزیده مردم ایران به رسمیت شناخته شود.
+• در همه نهادهای رسمی، حداکثر حمایت از غیرنظامیان مورد پشتیبانی قرار گیرد و حفاظت از جمعیتی که در فعالیت‌های نظامی دخیل نیستند، به‌عنوان یک اولویت مطلق در نظر گرفته شود.
+
+ما این درخواست را با احترام به ارزش‌های دموکراتیکی که نروژ را هدایت می‌کنند و در همسویی با آن‌ها مطرح می‌کنیم، و بر این باوریم که آزادی، حق تعیین سرنوشت، و حفاظت از غیرنظامیان اصولی جهان‌شمول هستند که باید در هر مکان و در هر چارچوب رسمی از آن‌ها دفاع شود.
+
+با احترام،`,
+      signatureTitle:"امضای شما",
+      signatureNote:"لطفاً نام خود را برای امضا وارد کنید تا به ایمیل ارزش و اعتبار بیشتری بدهد.\nما هیچ‌یک از این اطلاعات را در هیچ جایی ذخیره نمی‌کنیم، بنابراین نام شما محفوظ می‌ماند.\nدر صورت تمایل می‌توانید متن ایمیل را کمی تغییر دهید تا کاملاً تکراری نباشد.\nاگر برای کشورهای دیگر هم به این پلتفرم نیاز دارید، به ما اطلاع دهید.",
+      nameLabel:"نام کامل",
+      namePlaceholder:"نام خود را اینجا بنویسید",
+      nameHint:"این قسمت اختیاری است.",
+      toggle:"🌐 EN",
+
+      panelTitle:"ارسال ایمیل به اعضای پارلمان نروژ",
+      panelGroup:"پارلمان نروژ",
+      panelMeta:"گیرندگان: لیست ایمیل ۱ • متن: پیام ۱",
+      sendBtn:"✅ ارسال ایمیل",
+      statusLabel:"وضعیت: ",
+      loaded:(n)=>`بارگذاری شد: ${n} ایمیل`,
+      bullets:[
+        "پیش‌نویس ایمیل با گیرندگان آماده می‌شود.",
+        "اولین گیرنده در To و بقیه گیرندگان در Bcc قرار می‌گیرند.",
+        "در صورت وارد کردن نام، نام شما در پایان ایمیل اضافه می‌شود."
+      ],
+      previewSummary:"نمایش موضوع و متن ایمیل",
+      subjectLabel:"موضوع:",
+      files:"فایل‌ها: mail1.txt + message1.txt",
+      dash:"—",
+      errorPrefix:"خطا: "
+    },
+
+    en: {
+      dir:"ltr",
+      title:"Norway email campaign",
+      subtitle:"One click opens a ready draft in your email app.\nThe first recipient is placed in the To field and the remaining recipients are included in the Bcc field.",
+      aboutTitle:"Translation of the email message",
+      aboutText:`Subject: Appeal to the Norwegian Parliament: support for the Iranian people, Iran’s territorial integrity, and the role of Crown Prince Reza Pahlavi
+
+Body:
+
+Honourable Representatives of the Norwegian Parliament,
+
+We write to you as Iranian citizens and supporters of human rights, residing in Norway and across Europe, to draw your attention to the situation of the Iranian people and to the importance of a clear and consistent position by Norway.
+
+The Iranian people deserve freedom, dignity, and full recognition of their fundamental rights. For nearly half a century, they have lived under the repression of the Islamic Republic, a system that has deprived millions of citizens of their most basic freedoms. At this historic moment, it is essential that Norway firmly and unequivocally support the Iranian people in their struggle to bring this regime to an end.
+
+Millions of Iranians, both inside and outside the country, are calling for the end of the Islamic Republic and for the construction of a free, democratic Iran that respects human rights. In this historic process, many Iranians recognise Crown Prince Reza Pahlavi as the only leader with the legitimacy and credibility necessary to represent the will of the Iranian people. His role in guiding a peaceful transition from the Islamic Republic toward a democratic system, legitimately chosen by the people, is regarded by the vast majority of Iranians as fundamentally important.
+
+We ask that:
+
+• Norway continue to support the Iranian people politically and morally in their aspiration for freedom and for the end of the Islamic Republic.
+• The inviolability of Iran’s territorial integrity be reaffirmed in all national and international forums.
+• Strong support be given to the legitimate will of the Iranian people to determine the future institutional and political structure of their country.
+• The fundamental role of Crown Prince Reza Pahlavi be recognised as a central figure and qualified leader to guide the peaceful transition from the Islamic Republic toward a democratic system chosen by the Iranian people.
+• Maximum protection of civilians be supported in every institutional forum, and that the protection of the population not involved in military activities be treated as an absolute priority.
+
+We make this appeal in respect for and in shared commitment to the democratic values that guide Norway, and in the conviction that freedom, self-determination, and the protection of civilians are universally recognised principles that must be defended in every place and official context.
+
+Respectfully,`,
+      signatureTitle:"Your signature",
+      signatureNote:"Please write your name for the signature to give more value to the email.\nWe do not save any of this data or your name anywhere, so you will be safe.\nFeel free to slightly change the email so it is not fully repetitive.\nIf you need to use this platform for other countries as well, please let us know.",
+      nameLabel:"Full name",
+      namePlaceholder:"Write your name here",
+      nameHint:"This field is optional.",
+      toggle:"🌐 NO",
+
+      panelTitle:"Send email to members of the Norwegian Parliament",
+      panelGroup:"Norwegian Parliament",
+      panelMeta:"Recipients: email list 1 • Text: message 1",
+      sendBtn:"✅ Send email",
+      statusLabel:"Status: ",
+      loaded:(n)=>`Loaded: ${n} emails`,
+      bullets:[
+        "A draft email with recipients is prepared.",
+        "The first recipient goes in To and the rest go in Bcc.",
+        "If a name is entered, it is added at the end of the email."
+      ],
+      previewSummary:"Show subject and body",
+      subjectLabel:"Subject:",
+      files:"Files: mail1.txt + message1.txt",
+      dash:"—",
+      errorPrefix:"Error: "
+    },
+
+    no: {
+      dir:"ltr",
+      title:"Norge e-postkampanje",
+      subtitle:"Med ett klikk åpnes et ferdig utkast i e-postappen din.\nDen første mottakeren plasseres i To-feltet, og de øvrige mottakerne legges i Bcc-feltet.",
+      aboutTitle:"Oversettelse av e-postteksten",
+      aboutText:`Emne: Appell til det norske parlamentet: støtte til det iranske folket, Irans territorielle integritet og kronprins Reza Pahlavis rolle
+
+Tekst:
+
+Ærede medlemmer av det norske parlamentet,
+
+Vi skriver til dere som iranske borgere og støttespillere for menneskerettighetene, bosatt i Norge og andre steder i Europa, for å rette oppmerksomheten deres mot situasjonen for det iranske folket og betydningen av en klar og konsekvent holdning fra Norges side.
+
+Det iranske folket fortjener frihet, verdighet og full anerkjennelse av sine grunnleggende rettigheter. I nesten et halvt århundre har de levd under undertrykkelsen fra Den islamske republikken, et system som har fratatt millioner av borgere deres mest grunnleggende friheter. I dette historiske øyeblikket er det avgjørende at Norge fast og utvetydig støtter det iranske folket i deres kamp for å få slutt på dette regimet.
+
+Millioner av iranere, både i og utenfor landet, krever en slutt på Den islamske republikken og byggingen av et fritt og demokratisk Iran som respekterer menneskerettighetene. I denne historiske prosessen anerkjenner mange iranere kronprins Reza Pahlavi som den eneste lederen med den legitimiteten og troverdigheten som er nødvendig for å representere det iranske folkets vilje. Hans rolle i å lede en fredelig overgang fra Den islamske republikken til et demokratisk system, legitimt valgt av folket, anses av det store flertallet av iranere som grunnleggende viktig.
+
+Vi ber om at:
+
+• Norge fortsetter å støtte det iranske folket politisk og moralsk i deres streben etter frihet og etter slutten på Den islamske republikken.
+• Irans territorielle integritet bekreftes som ukrenkelig i alle nasjonale og internasjonale fora.
+• Det gis sterk støtte til det iranske folkets legitime vilje til å bestemme sitt lands fremtidige institusjonelle og politiske struktur.
+• Kronprins Reza Pahlavis grunnleggende rolle anerkjennes som en sentral skikkelse og kvalifisert leder for å veilede den fredelige overgangen fra Den islamske republikken til et demokratisk system valgt av det iranske folket.
+• Maksimal beskyttelse av sivile støttes i alle institusjonelle fora, og at beskyttelsen av befolkningen som ikke er involvert i militære aktiviteter behandles som en absolutt prioritet.
+
+Vi fremsetter denne appellen i respekt for og i felles tilslutning til de demokratiske verdiene som kjennetegner Norge, og i overbevisningen om at frihet, selvbestemmelse og beskyttelsen av sivile er universelt anerkjente prinsipper som må forsvares overalt og i enhver offisiell sammenheng.
+
+Med respekt,`,
+      signatureTitle:"Din signatur",
+      signatureNote:"Vennligst skriv navnet ditt for signaturen for å gi e-posten mer verdi.\nVi lagrer ingen av disse opplysningene eller navnet ditt noe sted, så du er trygg.\nDu kan gjerne endre e-postteksten litt slik at den ikke blir helt repetitiv.\nHvis du trenger denne plattformen også for andre land, gi oss beskjed.",
+      nameLabel:"Fullt navn",
+      namePlaceholder:"Skriv navnet ditt her",
+      nameHint:"Dette feltet er valgfritt.",
+      toggle:"🌐 FA",
+
+      panelTitle:"Send e-post til medlemmer av det norske parlamentet",
+      panelGroup:"Det norske parlamentet",
+      panelMeta:"Mottakere: e-postliste 1 • Tekst: melding 1",
+      sendBtn:"✅ Send e-post",
+      statusLabel:"Status: ",
+      loaded:(n)=>`Lastet inn: ${n} e-poster`,
+      bullets:[
+        "Et e-postutkast med mottakere blir klargjort.",
+        "Den første mottakeren går i To og resten i Bcc.",
+        "Hvis et navn fylles inn, legges det til på slutten av e-posten."
+      ],
+      previewSummary:"Vis emne og tekst",
+      subjectLabel:"Emne:",
+      files:"Filer: mail1.txt + message1.txt",
+      dash:"—",
+      errorPrefix:"Feil: "
+    }
+  };
+
+  const PANEL = {
+    mailFile:"mail1.txt",
+    msgFile:"message1.txt",
+    emails:[],
+    subject:"",
+    body:"",
+    loaded:false,
+    error:""
+  };
+
+  function setLang(lang){
+    LANG = lang;
+    const t = UI[LANG];
+
+    document.documentElement.lang = LANG;
+    document.documentElement.dir = t.dir;
+    document.title = t.title;
+
+    document.getElementById("pageTitle").textContent = t.title;
+    document.getElementById("pageSubtitle").textContent = t.subtitle;
+    document.getElementById("aboutTitle").textContent = t.aboutTitle;
+    document.getElementById("aboutText").textContent = t.aboutText;
+    document.getElementById("signatureTitle").textContent = t.signatureTitle;
+    document.getElementById("signatureNote").textContent = t.signatureNote;
+    document.getElementById("nameLabel").textContent = t.nameLabel;
+    document.getElementById("fullName").placeholder = t.namePlaceholder;
+    document.getElementById("nameHint").textContent = t.nameHint;
+    document.getElementById("langBtn").textContent = t.toggle;
+
+    document.getElementById("panelTitle").textContent = t.panelTitle;
+    document.getElementById("pillLabel").textContent = t.panelGroup;
+    document.getElementById("panelMeta").textContent = t.panelMeta;
+    document.getElementById("sendBtn").textContent = t.sendBtn;
+    document.getElementById("statusLabel").textContent = t.statusLabel;
+    document.getElementById("previewSummary").textContent = t.previewSummary;
+    document.getElementById("previewSubjectLabel").textContent = t.subjectLabel;
+    document.getElementById("files").textContent = t.files;
+
+    renderPanel();
+  }
+
+  document.getElementById("langBtn").addEventListener("click", () => {
+    const previousLang = LANG;
+    const next = (LANG === "fa") ? "en" : (LANG === "en") ? "no" : "fa";
+
+    trackEvent("language_switch", {
+      event_category: "engagement",
+      event_label: "language button",
+      from_language: previousLang,
+      to_language: next,
+      page_name: "norway_campaign"
+    });
+
+    setLang(next);
+  });
+
+  document.getElementById("fullName").addEventListener("input", (e) => {
+    if (!nameInputTracked && e.target.value.trim().length > 0) {
+      nameInputTracked = true;
+      trackEvent("name_input_started", {
+        event_category: "engagement",
+        event_label: "signature name input",
+        language: LANG,
+        page_name: "norway_campaign"
+      });
+    }
+    renderPanel();
+  });
+
+  function normalizeEmails(text){
+    return text
+      .split(/\r?\n/)
+      .map(l => l.trim())
+      .filter(Boolean)
+      .filter(l => !l.startsWith("#"));
+  }
+
+  function parseMessage(text){
+    const subjectLine = text.match(/^SUBJECT:\s*(.*)$/m);
+    const bodySplit = text.split(/^\s*BODY:\s*$/m);
+
+    const subject = subjectLine ? subjectLine[1].trim() : "";
+    const body = (bodySplit.length > 1) ? bodySplit.slice(1).join("\n").trim() : "";
+    return { subject, body };
+  }
+
+  function getSignedBody(body){
+    const name = document.getElementById("fullName").value.trim();
+    if(!name) return body || "";
+    const safeBody = body || "";
+    return `${safeBody}\n\n${name}`;
+  }
+
+  function buildMailto(emails, subject, body){
+    const to = emails[0] || "";
+    const bccList = emails.slice(1);
+
+    const toEncoded = encodeURIComponent(to);
+    const bccEncoded = encodeURIComponent(bccList.join(","));
+    const s = encodeURIComponent(subject || "");
+    const b = encodeURIComponent(body || "");
+
+    let url = `mailto:${toEncoded}?subject=${s}&body=${b}`;
+
+    if (bccList.length > 0) {
+      url += `&bcc=${bccEncoded}`;
+    }
+
+    return url;
+  }
+
+  function setPanelError(msg){
+    PANEL.error = msg;
+    const errEl = document.getElementById("error");
+    errEl.textContent = msg ? (" — " + msg) : "";
+  }
+
+  function renderPanel(){
+    const t = UI[LANG];
+    const finalBody = getSignedBody(PANEL.body);
+
+    document.getElementById("status").textContent = PANEL.loaded ? t.loaded(PANEL.emails.length || 0) : t.loaded(0);
+
+    const ul = document.getElementById("bullets");
+    ul.innerHTML = "";
+    for(const line of t.bullets){
+      const li = document.createElement("li");
+      li.textContent = line;
+      ul.appendChild(li);
+    }
+
+    document.getElementById("previewSubject").textContent = PANEL.subject || t.dash;
+    document.getElementById("previewBody").textContent = finalBody || t.dash;
+
+    const ready = PANEL.loaded && PANEL.emails.length > 0 && (PANEL.subject.length > 0 || PANEL.body.length > 0) && !PANEL.error;
+    document.getElementById("sendBtn").disabled = !ready;
+  }
+
+  async function loadPanel(){
+    setPanelError("");
+
+    try{
+      const [mailRes, msgRes] = await Promise.all([
+        fetch(PANEL.mailFile, { cache:"no-store" }),
+        fetch(PANEL.msgFile, { cache:"no-store" })
+      ]);
+
+      if(!mailRes.ok) throw new Error(`${PANEL.mailFile} not found`);
+      if(!msgRes.ok) throw new Error(`${PANEL.msgFile} not found`);
+
+      const [mailTxt, msgTxt] = await Promise.all([mailRes.text(), msgRes.text()]);
+
+      PANEL.emails = normalizeEmails(mailTxt);
+      const parsed = parseMessage(msgTxt);
+      PANEL.subject = parsed.subject;
+      PANEL.body = parsed.body;
+      PANEL.loaded = true;
+
+      trackEvent("page_ready", {
+        event_category: "page_state",
+        event_label: "norway campaign loaded",
+        language: LANG,
+        recipient_count: PANEL.emails.length,
+        has_subject: PANEL.subject ? 1 : 0,
+        has_body: PANEL.body ? 1 : 0,
+        page_name: "norway_campaign"
+      });
+
+      renderPanel();
+    }catch(e){
+      PANEL.loaded = false;
+      PANEL.emails = [];
+      PANEL.subject = "";
+      PANEL.body = "";
+      setPanelError(UI[LANG].errorPrefix + e.message);
+
+      trackEvent("page_load_error", {
+        event_category: "page_state",
+        event_label: "norway campaign load error",
+        language: LANG,
+        error_message: String(e.message || "unknown error"),
+        page_name: "norway_campaign"
+      });
+
+      renderPanel();
+    }
+  }
+
+  document.getElementById("sendBtn").addEventListener("click", () => {
+    if(!PANEL.loaded || !PANEL.emails.length) return;
+
+    const finalBody = getSignedBody(PANEL.body);
+    const mailtoUrl = buildMailto(PANEL.emails, PANEL.subject, finalBody);
+
+    let navigated = false;
+    const openMailClient = () => {
+      if (navigated) return;
+      navigated = true;
+      window.location.href = mailtoUrl;
+    };
+
+    trackEvent("send_email_click", {
+      event_category: "email_campaign",
+      event_label: "Norway Parliament Send Button",
+      language: LANG,
+      recipient_count: PANEL.emails.length,
+      has_name: document.getElementById("fullName").value.trim() ? 1 : 0,
+      page_name: "norway_campaign",
+      value: 1,
+      event_callback: openMailClient,
+      event_timeout: 1200
+    });
+
+    setTimeout(openMailClient, 1300);
+  });
+
+  (async function init(){
+    setLang("fa");
+    await loadPanel();
+    renderPanel();
+  })();
+</script>
+
+</body>
+</html>
